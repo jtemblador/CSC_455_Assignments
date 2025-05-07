@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* This centers all text content */
+    background-color: #f0f0f0;
+    transition: background-color 0.5s;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers flex children horizontally */
+    justify-content: center; /* This helps with vertical centering */
+    min-height: 100vh; /* Makes body take up full viewport height */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.clear-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: 3px solid #333;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    border-color: #555;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#happy-btn {
+    background-color: #FFD700;
+    color: #333;
+    border-color: #B8860B;
+    background-image: linear-gradient(to bottom right, #FFD700, #FFC125);
+}
+
+#sad-btn {
+    background-color: #87CEEB;
+    color: #333;
+    border-color: #4682B4;
+    background-image: linear-gradient(to bottom right, #87CEEB, #5F9EA0);
+}
+
+#angry-btn {
+    background-color: #FF6347;
+    color: white;
+    border-color: #B22222;
+    background-image: linear-gradient(to bottom right, #FF6347, #DC143C);
+}
+
+#surprised-btn {
+    background-color: #9370DB;
+    color: white;
+    border-color: #483D8B;
+    background-image: linear-gradient(to bottom right, #9370DB, #8A2BE2);
+}
+
+#clear-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border-color: #999;
+    background-image: linear-gradient(to bottom right, #f0f0f0, #dedede);
+    width: 200px;
+}
+
+#message {
+    font-size: 24px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Mood Classes */
+.happy {
+    background-color: #FFD700; /* Bright yellow for happy */
+}
+
+.sad {
+    background-color: #87CEEB; /* Light blue for sad */
+}
+
+.angry {
+    background-color: #FF6347; /* Tomato red for angry */
+}
+
+.surprised {
+    background-color: #9370DB; /* Purple for surprised */
+}

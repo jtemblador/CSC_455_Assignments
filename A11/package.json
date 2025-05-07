@@ -1,0 +1,14 @@
+{
+    "name": "mongo-wrap-up",
+    "version": "1.0.0",
+    "description": "MongoDB Atlas connection demo",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "dotenv": "^16.5.0",
+        "mongoose": "^7.8.6"
+    }
+}

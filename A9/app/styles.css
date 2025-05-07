@@ -1,0 +1,220 @@
+/* Earthy Brown & Green Theme for the To-Do List App */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+  --primary-color: #2d6a4f;
+  --secondary-color: #40916c;
+  --accent-color: #dda15e;
+  --light-color: #fefae0;
+  --dark-color: #3a3a3a;
+  --delete-color: #bc6c25;
+  --delete-hover: #9c4a1a;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #588157 0%, #a3b18a 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-color);
+  padding: 30px 0;
+}
+
+.App {
+  width: 100%;
+  max-width: 650px;
+  padding: 30px;
+  background-color: rgba(254, 250, 224, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg), 0 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* Form styling */
+form {
+  margin: 20px 0 30px;
+  display: flex;
+  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+form input {
+  flex-grow: 1;
+  padding: 15px 20px;
+  border: 2px solid #d8e2dc;
+  background-color: var(--light-color);
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+form input::placeholder {
+  color: #95a5a6;
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(64, 145, 108, 0.2);
+}
+
+form button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 12px 25px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: var(--shadow-sm);
+  letter-spacing: 0.5px;
+}
+
+form button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+form button:active {
+  transform: translateY(0);
+}
+
+/* Todo List styling */
+.todo-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.empty-list {
+  text-align: center;
+  color: #636e72;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  font-style: italic;
+  box-shadow: var(--shadow-sm);
+  margin: 20px 0;
+  border-left: 5px solid var(--accent-color);
+}
+
+.todo-list li {
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-left: 5px solid var(--primary-color);
+}
+
+.todo-list li:nth-child(odd) {
+  border-left-color: var(--secondary-color);
+}
+
+.todo-list li:nth-child(3n) {
+  border-left-color: var(--accent-color);
+}
+
+.todo-list li:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+  background-color: rgba(254, 250, 224, 0.9);
+}
+
+.todo-list li button {
+  background-color: var(--delete-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.9;
+}
+
+.todo-list li button:hover {
+  background-color: var(--delete-hover);
+  opacity: 1;
+}
+
+/* Animation for adding new items */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.todo-list li {
+  animation: slideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .App {
+    padding: 20px;
+    margin: 0 15px;
+  }
+  
+  form {
+    flex-direction: column;
+  }
+  
+  form button {
+    width: 100%;
+  }
+}

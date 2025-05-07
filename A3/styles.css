@@ -1,0 +1,114 @@
+.small-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes it a perfect circle */
+    /* ADVANCED 1: Add transition for hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.small-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* step 2 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f5943;
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #1f5943 0%, #2a7d5f 100%); /* gradient background */
+}
+
+p {
+    text-align: center;
+}
+
+/* step 3 - 1 (header/title) */
+h1 {
+    background-color: rgb(106, 106, 106);
+    color: black; /* text color */
+    text-align: center;
+    padding: 20px;
+    /* ADVANCED 3: Add text shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    border-radius: 8px;
+}
+
+nav {
+    background-color: #41271c;
+    margin: 100;
+    padding: 10px 0;
+    text-align: center;
+    /* sticky header at the top*/
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+    color: #166446;
+    margin: 0 15px;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #4d6a5f;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* step 4 */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px 2px black;
+}
+
+h2 {
+    background-color: rgb(74, 74, 74);
+    border-radius: 10px;
+    color: black;
+    max-width: 400px;
+    text-align: center;
+    padding: 5px;
+    margin: 20px auto;
+    /* ADVANCED 5: Add CSS custom properties (variables) for consistent styling */
+    /* --heading-padding: 12px;
+    padding: var(--heading-padding);
+    position: relative; */
+}
+
+/* step 6 */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer a {
+    color: #20abf1;
+    text-decoration: wavy;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #A0D2EB;
+}
+
+.video-container {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
